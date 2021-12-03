@@ -1,15 +1,12 @@
-const Head=1;
-const Tail=0;
-let n1=Math.floor((Math.random()*2));
-if(Head==n1)
+var prompt = require('prompt-sync')();
+//3. Write a program to simulate a coin flip and print out HEADS & TAILS
+let flipCoin=prompt('Enter "F" For Flipping Coin: ');
+let coinOutput=Math.floor(Math.random()*2);
+if(coinOutput==0)
 {
-    console.log("Head");
-}
-else if(Tail==n1)
-{
-    console.log("Tail");
+    console.log("Its HEADS");
 }
 else
 {
-    console.log("invalid");
+    console.log("Its TAILS");
 }
