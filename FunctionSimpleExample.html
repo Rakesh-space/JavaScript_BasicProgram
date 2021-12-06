@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<script>
+'use script'
+function askDefault(yes,no,thQue='Can you Answer')
+{
+    if(question(theQue)) 
+        yes()
+    else
+        no();
+}
+
+function ask(theQue,...othres)
+{
+    if(question(theQue))
+         othres[0]()
+    else    
+         othres[1]()
+
+}
+
+function showOk()
+{
+    alert("You agreed.");    
+}
+
+function showCancel()
+{
+    alert("You canceled the execution.");
+}
+
+let question=function(theQue)
+{   
+    return confirm(theQue);
+};
+
+//usage: function showOk, showCancel are passed as argument to ask
+ask("Do you agree?",showOk,showCancel);
+askDefault(showOk,showCancel);
+</script>
+</html>
